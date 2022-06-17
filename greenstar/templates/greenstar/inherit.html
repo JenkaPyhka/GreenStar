@@ -62,10 +62,20 @@
                 </div>
                 <div class="col"></div>
                 <div class="col">
-                    <h5 style="color: #fff;">Обратная Связь</h5>
-                    <form action="#" class="newsletter_form">
-                        <input class="my-4" type="text" placeholder="Введите свою почту...">
-                        <button  type="submit">Отправить</button>
+                    <h4 style="color: #fff;" class="mb-4">Обратная Связь</h4>
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="textname" name="subject" placeholder="Имя">
+                            <label for="textname">Ваше имя</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="textemail" name="text" placeholder="name@example.com">
+                            <label for="textemail">Ваш e-mail</label>
+                        </div>
+                        <input type="hidden" name="access_token" value="7agyvavuj68ibdmzmllpv2mr" />
+                        <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                        <button class="w-100 boxed-btn3 mb-2" id="submit_form" type="submit" value="Send">Отправить</button>
                     </form>
                     <p style="color: #AAB1B7;">Мы свяжемся с вами и поможем</p>
                 </div>
@@ -78,3 +88,15 @@
     <script async src="{% static 'greenstar/js/search.js' %}"></script>
 </body>
 </html>
+
+
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script>
