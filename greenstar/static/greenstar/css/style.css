@@ -1,0 +1,184 @@
+body {
+    background: #F5F7FA;
+}
+
+a {
+    text-decoration: none;
+}
+
+.socail_links ul {
+    text-align: center;
+}
+
+.socail_links ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.boxed-btn3 {
+    background: #00D363;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.boxed-btn3:hover {
+    color: #00D363;
+    border: 1px solid #00D363;
+    background: transparent;
+}
+
+.boxed-btn4 {
+    color: #00D363;
+    padding: 13px 29px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #00D363;
+    background: transparent;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.boxed-btn4:hover {
+    color: #fff;
+    background: #00D363;
+    border: 1px solid transparent;
+}
+
+.bradcam_bg_1 {
+    background: url(../img/bradcam.png) 100% 100% no-repeat;
+    background-size: cover;
+}
+
+.card_candid {
+    border: none;
+}
+
+.card_candid h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #001D38;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.card_candid p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #AAB1B7;
+    margin-bottom: 0;
+}
+
+.socail_links {
+    width: 50%;
+    margin: auto;
+}
+
+.socail_links ul li a {
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background: transparent;
+    color: #334A60;
+    transition: 0.3s;
+    border: 1px solid #334A60;
+}
+
+.socail_links ul li a i {
+    font-size: 15px;
+    line-height: 40px;
+    position: relative;
+    top: -1px;
+}
+
+.socail_links ul li:hover a {
+    color: #fff;
+    background: #00D363;
+    border-color: transparent;
+    border: 1px solid #00D363;
+}
+
+.newsletter_form input {
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 15px;
+    color: #FFFFFF;
+    border: none;
+    border: 1px solid #334A60;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.newsletter_form button {
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    background: #00D363;
+    border: 1px solid #00D363;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.newsletter_form button:hover {
+    color: #00D363;
+    border: 1px solid #00D363;
+    background: transparent;
+}
+
+.green_text_card .card_candid:hover .card-title {
+    color: #00D363;
+}
+
+.card_index {
+    transition: .3s;
+}
+
+.card_index:hover {
+    border: 1px solid #00D363;
+}
+
+.single_wrap {
+    color: #7A838B;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.diplom .thumb img {
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;}
+.diplom .thumb img:hover {
+    box-shadow: 0px 0px 6px -1px black;}
+
+.job_content ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #AAB1B7;
+    line-height: 38px;}
+.job_content ul li span {color: #001D38;}
+
+.share_wrap ul { padding: 0px 10px; }
+.share_wrap ul li {display: inline-block;padding-right: 5px;}
+.share_wrap ul li a {font-size: 16px;color: #D5D5D5;}
+.share_wrap ul li a:hover {color: #00D363;}
+
+.text_transparrent{
+    position: absolute;
+    color: transparent;
+}

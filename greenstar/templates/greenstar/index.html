@@ -1,0 +1,59 @@
+{% extends 'greenstar/inherit.html' %}
+{% load static %}
+
+<!-- Header сайта -->
+{% block title %}GreenStar Portfolio{% endblock %}
+{% block onetitle %}GreenStar Portfolio{% endblock %}
+{% block twotitle %}Лучшие достижения учителей{% endblock %}
+{% block threetitle %}Сайт-портфолио для учителя и ученика{% endblock %}
+
+<!-- Body сайта -->
+{% block main %}
+    <div class="container">
+        <div class="d-flex justify-content-between mb-4" style="padding: 0px 70px">
+            <h1>Недавно созданные портфолио</h1>
+            <a href="{% url 'candidate' %}" class="boxed-btn4" type="submit">Показать больше</a>
+        </div>
+        <div class="row green_text_card" style="padding: 0px 70px 70px 70px">
+            {% for i in portfolios %}
+                <div class="col-12">
+                    <div class="card mb-3 card_index" style="padding: 20px;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="" style="background: #F5F7FA; padding: 15px; margin: 10px; border-radius:10px">
+                                <img src="{{ i.logo }}" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 35px; font-weight: 400;">{{ i.fio }}</h5>
+                                <span class="card-text" style="font-size: 18px;color: #AAB1B7; padding-right: 50px;"><i class="fa fa-map-marker"></i> {{ i.school }}</span>
+                                <span class="card-text" style="font-size: 18px;color: #AAB1B7;"><i class="fa fa-clock-o"></i> {{ i.date }}</span>
+                            </div>
+                            <div class="">
+                                <a href="{% url 'job' %}" class="boxed-btn3" type="submit">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div style="background-color: #2B9BFF; width: 100%; padding: 145px 0px; margin: auto;">
+        <div class="container" style="padding: 0px 100px">
+            <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1">
+                <div class="col">
+                    <p style="color: #fff; font-size: 35px;">Вы пришли изучить портфолио своего учителя?</p>
+                    <p style="color: #fff;">Тогда все что вам нужно, это нажать на кнопку снизу и все увидеть</p>
+                    <a href="{% url 'candidate' %}" class="boxed-btn3" type="submit">Смотреть</a>
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <p style="color: #fff; font-size: 35px;">Вы хотите оставить свое портфолио?</p>
+                    <p style="color: #fff;">Тогда вам сюда</p>
+                    <a href="http://127.0.0.1:8000/admin" class="boxed-btn3" type="submit">Создать Партфолио</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #fff; width: 100%; padding: 145px 0px; margin: auto;">
+        <div class="container text-center"><p style="color: #000; font-size: 35px;">О нас</p></div>
+    </div>
+{% endblock %}

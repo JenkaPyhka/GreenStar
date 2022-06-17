@@ -1,0 +1,31 @@
+{% extends 'greenstar/inherit.html' %}
+{% load static %}
+
+<!-- Header сайта -->
+{% block title %}Портфолио{% endblock %}
+{% block onetitle %}GreenStar Portfolio{% endblock %}
+{% block twotitle %}Портфолио{% endblock %}
+{% block threetitle %}Сайт-портфолио для учителя и ученика{% endblock %}
+
+<!-- Body сайта -->
+{% block main %}
+    <div class="container">
+        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row cols-xs-1 g-4 green_text_card" style="padding: 70px;">
+            {% for i in portfolios %}
+                <div class="col">
+                    <a href="{% url 'job' %}">
+                        <div class="card card_candid py-4 text-center">
+                            <div class="thumb">
+                                <img src="{{ i.logo }}"  alt="...">
+                            </div> 
+                            <div class="card-body">
+                                <h4 class="card-title">{{ i.fio }}</h4>
+                                <p class="card-text">{{ i.objects_school }}</p>
+                            </div>
+                        </div>
+                    </a>   
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
