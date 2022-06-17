@@ -1,0 +1,51 @@
+{% extends 'greenstar/inherit.html' %}
+{% load static %}
+
+<!-- Header сайта -->
+{% block title %}GreenStar Portfolio{% endblock %}
+{% block onetitle %}GreenStar Portfolio{% endblock %}
+{% block twotitle %}Создайте свое портфолио{% endblock %}
+{% block threetitle %}Сайт-портфолио для учителя и ученика{% endblock %}
+
+<!-- Body сайта -->
+{% block main %}
+<div class="container">
+
+    <form method="POST" class="col-12 d-flex justify-content-center mb-4"> 
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                <h4 class="mb-4">Обязательные поля</h4>
+                <div class="form-floating">{{ form.logo }}<label for="floatingInputGrid">Ссылка на ваш логотип</label></div>
+                <div class="form-floating">{{ form.fio }}<label for="floatingInputGrid">Фамилия Имя Отчество</label></div>
+                <div class="form-floating">{{ form.school }}<label for="floatingInputGrid">Школа</label></div>
+                <div class="form-floating">{{ form.objects_school }}<label for="floatingInputGrid">Предмет</label></div>
+                <div class="form-floating">{{ form.date }}<label for="floatingInputGrid">Дата год-месяц-день (2022-06-17)</label></div>
+                <div class="form-floating">{{ form.education }}<label for="floatingInputGrid">Образование</label></div>
+                <div class="form-floating">{{ form.experience }}<label for="floatingInputGrid">Стаж работы</label></div>
+                <div class="form-floating">{{ form.qualif }}<label for="floatingInputGrid">Повышение квалификации</label></div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-3">
+                <h4 class="mb-4">Дипломы и грамоты</h4>
+                <div class="form-floating">{{ form.diploma1 }}<label for="floatingInputGrid">Ссылка на диплом 1</label></div>
+                <div class="form-floating">{{ form.diploma2 }}<label for="floatingInputGrid">Ссылка на диплом 2</label></div>
+                <div class="form-floating">{{ form.diploma3 }}<label for="floatingInputGrid">Ссылка на диплом 3</label></div>
+                <div class="form-floating">{{ form.diploma4 }}<label for="floatingInputGrid">Ссылка на диплом 4</label></div>
+                <div class="form-floating">{{ form.diploma5 }}<label for="floatingInputGrid">Ссылка на диплом 5</label></div>
+                <div class="form-floating">{{ form.diploma6 }}<label for="floatingInputGrid">Ссылка на диплом 6</label></div>
+                <div class="form-floating">{{ form.diploma7 }}<label for="floatingInputGrid">Ссылка на диплом 7</label></div>
+                <div class="form-floating">{{ form.diploma8 }}<label for="floatingInputGrid">Ссылка на диплом 8</label></div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-3">
+                <h4 class="mb-4">Расскажите о себе</h4>
+                <div class="form-floating">{{ form.biograf }}<label for="floatingInputGrid">Биография</label></div>
+            </div>
+            <div class="col-12">
+                <span>{{ error }}</span>
+                <button class="boxed-btn3 col-12" type="submit">Создать</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

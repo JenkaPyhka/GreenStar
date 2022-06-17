@@ -7,13 +7,16 @@
 {% block twotitle %}Портфолио{% endblock %}
 {% block threetitle %}Сайт-портфолио для учителя и ученика{% endblock %}
 
+
 <!-- Body сайта -->
 {% block main %}
     <div class="container">
-        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row cols-xs-1 g-4 green_text_card" style="padding: 70px;">
+        
+        <div class="liveSearchBar row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 row cols-xs-1 g-4 green_text_card" style="padding: 20px 70px 70px 70px;">
+            <input class="form-control m-0" style="padding: 10px 24px;" id="filter" type="text" placeholder="Поиск" aria-label="Поиск">
             {% for i in portfolios %}
-                <div class="col">
-                    <a href="{% url 'job' %}">
+                <div class="col search-item">
+                    <a href="{% url 'job_detail' i.id %}">
                         <div class="card card_candid py-4 text-center">
                             <div class="thumb">
                                 <img src="{{ i.logo }}"  alt="...">
