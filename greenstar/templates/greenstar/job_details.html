@@ -10,79 +10,81 @@
 <!-- Body сайта -->
 {% block main %}
     <div class="container">
-            <div class="row liveSearchBar" style="padding: 0px 70px">
-                <div class="search-item row">
-                    <div class="card col-xl-8 col-lg-12 mb-4 border-0">
-                        <div class="card_index border-0 p-4">
-                            <div class="row d-flex align-items-center px-2 pb-4">
-                                <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
-                                    <div style="background: #F5F7FA; padding: 15%; border-radius:10px"><img src="{{ portfolio.logo }}" alt="..."></div></div>
-                                <div class="search-item col-xl-9 col-lg-8 col-md-12 col-sm-12">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <h5 class="card-title col-lg-12 col-md-12" style="font-size: 30px; font-weight: 400; padding-bottom: 10px;">{{ portfolio.fio }}</h5>
-                                            <p class="card-text col-xl-7 col-lg-12 col-md-12" style="font-size: 18px;color: #AAB1B7"><i class="fa fa-map-marker"></i> {{ portfolio.school }}</p>
-                                            <p class="card-text col-xl-5 col-lg-12 col-md-12" style="font-size: 18px;color: #AAB1B7"><i class="fa fa-clock-o"></i> {{ portfolio.date }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><hr>
-                            <div class="card-body px-2"><h5 class="card-title">Биография учителя</h5><p class="card-text single_wrap">{{ portfolio.biograf }}</p></div>
-                            <div class="card_index border-0 p-4">
-                                <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3 diplom" id="content">
-                                    {% if portfolio.diploma1 %}
-                                        <div class="col"><div class="thumb"><a id="example1" href="{{ portfolio.diploma1 }}"><img style="width:100%" src="{{ portfolio.diploma1 }}" alt="example1"/></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma2 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma2 }}"><img style="width:100%" src="{{ portfolio.diploma2 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma3 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma3 }}"><img style="width:100%" src="{{ portfolio.diploma3 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma4 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma4 }}"><img style="width:100%" src="{{ portfolio.diploma4 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma5 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma5 }}"><img style="width:100%" src="{{ portfolio.diploma5 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma6 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma6 }}"><img style="width:100%" src="{{ portfolio.diploma6 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma7 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma7 }}"><img style="width:100%" src="{{ portfolio.diploma7 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                    {% if portfolio.diploma8 %}
-                                        <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma8 }}"><img style="width:100%" src="{{ portfolio.diploma8 }}" alt="example1"></a></div></div>
-                                    {% endif %}
-                                </div>
+        <div class="row">
+            <div class="card col-xl-8 col-lg-12 mb-4 border-0">
+                <div class="card_index border-0 p-4">
+                    <div class="row d-flex align-items-center p-0 pb-4">
+                        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 p-0 d-flex align-items-center justify-content-center">
+                            <div style="background: #F5F7FA; padding: 15%; border-radius:10px">
+                                <img src="{{ portfolio.logo }}" alt="...">
                             </div>
                         </div>
-                    </div>
-                    <div class="search-item col-xl-4 col-lg-12">
-                        <div class="card mb-4 border-0 p-4">
-                            <p class="text_transparrent">{{ portfolio.fio }}</p>
+                        <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
                             <div class="card-body">
-                                <h4 class="card-title pb-2">Характеристика учителя</h4><hr>
-                                <div class="job_content">
-                                    <ul><li>Образование: <span>{{ portfolio.education }}</span></li>
-                                        <li>Стаж: <span>{{ portfolio.experience }}</span></li>
-                                        <li>Повышение квалификации: <span>{{ portfolio.qualif }}</span></li></ul>
+                                <div class="row">
+                                    <h5 class="card-title col-lg-12 col-md-12" style="font-size: 30px; font-weight: 400; padding-bottom: 10px;">{{ portfolio.fio }}</h5>
+                                    <p class="card-text col-xl-7 col-lg-12 col-md-12" style="font-size: 18px;color: #AAB1B7"><i class="fa fa-map-marker"></i> {{ portfolio.school }}</p>
+                                    <p class="card-text col-xl-5 col-lg-12 col-md-12" style="font-size: 18px;color: #AAB1B7"><i class="fa fa-clock-o"></i> {{ portfolio.date }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-4 border-0 p-4 pb-2 share_wrap ">
-                            <p class="text_transparrent">{{ portfolio.fio }}</p>
-                            <ul>
-                                <span style="font-size: 15px; font-weight: 500; color: #001D38; padding-right: 10px;">Контакты учителя:</span>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-                                <li><a href="#"><i class="fa fa-envelope"></i></a> </li>
-                            </ul>
+                    </div><hr>
+                    <div class="card-body p-0 pb-4"><h5 class="card-title py-2">Биография учителя</h5><p class="card-text single_wrap">{{ portfolio.biograf }}</p></div><hr>
+                    <div class="card_index border-0">
+                        <h5 class="card-title pb-3 pt-2">Грамоты учителя</h5>
+                        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3 diplom" id="content">
+                            {% if portfolio.diploma1 %}
+                                <div class="col"><div class="thumb"><a id="example1" href="{{ portfolio.diploma1 }}"><img style="width:100%" src="{{ portfolio.diploma1 }}" alt="example1"/></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma2 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma2 }}"><img style="width:100%" src="{{ portfolio.diploma2 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma3 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma3 }}"><img style="width:100%" src="{{ portfolio.diploma3 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma4 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma4 }}"><img style="width:100%" src="{{ portfolio.diploma4 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma5 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma5 }}"><img style="width:100%" src="{{ portfolio.diploma5 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma6 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma6 }}"><img style="width:100%" src="{{ portfolio.diploma6 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma7 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma7 }}"><img style="width:100%" src="{{ portfolio.diploma7 }}" alt="example1"></a></div></div>
+                            {% endif %}
+                            {% if portfolio.diploma8 %}
+                                <div class="col"><div class="thumb"><a id='example1' href="{{ portfolio.diploma8 }}"><img style="width:100%" src="{{ portfolio.diploma8 }}" alt="example1"></a></div></div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="search-item col-xl-4 col-lg-12">
+                <div class="card mb-3 border-0 p-2">
+                    <div class="card-body">
+                        <h4 class="card-title pb-2 text-center">Характеристика учителя</h4><hr>
+                        <div class="job_content">
+                            <ul>
+                                <li>Образование: <span>{{ portfolio.education }}</span></li>
+                                <li>Стаж: <span>{{ portfolio.experience }}</span></li>
+                                <li>Повышение квалификации: <span>{{ portfolio.qualif }}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0 p-4 pb-2 share_wrap">
+                    <ul>
+                        <span style="font-size: 15px; font-weight: 500; color: #001D38; padding-right: 10px;">Контакты учителя:</span>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+                        <li><a href="#"><i class="fa fa-envelope"></i></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     
 {% endblock %}
