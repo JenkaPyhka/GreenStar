@@ -18,10 +18,13 @@ class portfolio(models.Model):
     education = models.CharField('Образование', max_length=150)
     experience = models.CharField('Стаж работы', max_length=150)
     qualif = models.CharField('Повышение квалификации', max_length=150)
-
+    author = models.CharField('Логин учителя', max_length=150)
     def __str__(self):
         return self.fio
-    
+
+    def get_absolute_url(self):
+        return f'/{self.id}'
+
     class Meta:
         verbose_name = 'Портволио'
         verbose_name_plural = 'Портволио'

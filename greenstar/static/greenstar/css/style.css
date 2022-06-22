@@ -191,3 +191,22 @@ a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.boxed-btn34 {
+    background: #00D363;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;}
+.boxed-btn34:hover {
+    background: #00D363;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;}

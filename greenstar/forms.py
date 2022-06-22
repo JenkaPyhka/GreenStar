@@ -6,7 +6,7 @@ class portfolioFrom(ModelForm):
         fields = [
             'logo','fio','school','objects_school','date','biograf',
             'diploma1','diploma2','diploma3','diploma4','diploma5','diploma6','diploma7','diploma8',
-            'education','experience','qualif'
+            'education','experience','qualif', 'author'
         ]
         widgets = {
             'logo': TextInput(attrs={'class': 'form-control mb-2','placeholder': 'Ссылка на ваш логотип'}),
@@ -26,4 +26,5 @@ class portfolioFrom(ModelForm):
             'education': TextInput(attrs={'class': 'form-control mb-2','placeholder': 'Образование'}),
             'experience': TextInput(attrs={'class': 'form-control mb-2','placeholder': 'Стаж работы'}),
             'qualif': TextInput(attrs={'class': 'form-control mb-2','placeholder': 'Повышение квалификации'}),
+            'author': TextInput(attrs={'class': 'form-control mb-2','placeholder': 'Логин учителя'}),
         }

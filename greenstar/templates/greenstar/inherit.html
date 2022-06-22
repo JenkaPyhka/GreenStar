@@ -32,7 +32,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2"></ul>
                     <form class="d-flex align-items-center">
-                        <a href="{% url 'create_portfolio' %}" class="boxed-btn3">Создать Партфолио</a>
+                        {% if request.user.is_authenticated == True %}
+                            <a href="{% url 'create_portfolio' %}" class="boxed-btn3 me-3">Создать Партфолио</a>
+                            <a class="boxed-btn34" disabled >{{ request.user.get_full_name }}</a>
+                        {% endif %}
                     </form>
                 </div>
             </div>

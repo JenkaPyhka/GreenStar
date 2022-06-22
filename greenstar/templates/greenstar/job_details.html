@@ -13,7 +13,7 @@
         <div class="row">
             <div class="card col-xl-8 col-lg-12 mb-4 border-0">
                 <div class="card_index border-0 p-4">
-                    <div class="row d-flex align-items-center p-0 pb-4">
+                    <div class="row d-flex align-items-center p-0 pb-3">
                         <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 p-0 d-flex align-items-center justify-content-center">
                             <div style="background: #F5F7FA; padding: 15%; border-radius:10px">
                                 <img src="{{ portfolio.logo }}" alt="...">
@@ -28,7 +28,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div><hr>
+                    </div>
+                    <div class="row d-flex align-items-center p-0 pb-2">
+                        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 p-0 d-flex align-items-center justify-content-center">
+                            {% if portfolio.author == request.user.get_username  %}
+                                <a href="{% url 'job_update' request.user.id %}" class="boxed-btn3">Редактировать</a>
+                            {% endif %}
+                        </div>
+                        <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12"></div>
+                    </div>
+                    <hr>
                     <div class="card-body p-0 pb-4"><h5 class="card-title py-2">Биография учителя</h5><p class="card-text single_wrap">{{ portfolio.biograf }}</p></div><hr>
                     <div class="card_index border-0">
                         <h5 class="card-title pb-3 pt-2">Грамоты учителя</h5>

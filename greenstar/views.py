@@ -1,13 +1,19 @@
 from http.client import HTTPResponse
 from django.shortcuts import render, redirect
 from .models import portfolio
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 from .forms import portfolioFrom
+
 
 class job_detail(DetailView):
     model = portfolio
     template_name = 'greenstar/job_details.html'
     context_object_name = 'portfolio'
+
+class job_update(UpdateView):
+    model = portfolio
+    template_name = 'greenstar/update.html'
+    form_class = portfolioFrom
 
 def index(request):
     portfolios = portfolio.objects.order_by('-date')[:4]
@@ -16,10 +22,6 @@ def index(request):
 def candidate(request):
     portfolios = portfolio.objects.order_by('-date')
     return render(request, 'greenstar/candidate.html', {'portfolios': portfolios})
-
-# def job_details(request):
-#     portfolios = portfolio.objects.all()
-#     return render(request, 'greenstar/job_details.html', {'portfolios': portfolios})
 
 def create_portfolio(request):
     error = ''
@@ -30,11 +32,9 @@ def create_portfolio(request):
             return redirect('home')
         else:
             error = "Форма заполнена не верно"
-
     form = portfolioFrom()
     data = { 
         'form': form,
         'error': error
     }
-
     return render(request, 'greenstar/create.html', data)
